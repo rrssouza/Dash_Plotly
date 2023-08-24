@@ -7,7 +7,6 @@ import pandas as pd
 from dash_bootstrap_templates import ThemeChangerAIO, template_from_url
 
 
-
 # dataset
 df = pd.read_csv("data.csv")
 
@@ -24,14 +23,11 @@ df['Mês'] = df['Mês'].replace(['Out'], 10)
 df['Mês'] = df['Mês'].replace(['Nov'], 11)
 df['Mês'] = df['Mês'].replace(['Dez'], 12)
 
-
-
 df['Valor Pago'] = df['Valor Pago'].str.lstrip('R$ ')
 
 df.loc[df['Status de Pagamento'] == 'Pago', 'Status de Pagamento'] = 1
 
 df.loc[df['Status de Pagamento'] == 'Não pago', 'Status de Pagamento'] = 0
-
 
 df['Chamadas Realizadas'] = df['Chamadas Realizadas'].astype(int)
 df['Dia'] = df['Dia'].astype(int)
@@ -40,8 +36,8 @@ df['Valor Pago'] = df['Valor Pago'].astype(int)
 df['Status de Pagamento'] = df['Status de Pagamento'].astype(int)
 
 
-dbc_css = ("https://cdn.jsdelivr.net/gh/AnnMarieW/dash-bootstrap-templates@V1.0.1/dbc.min.css")
 
+dbc_css = ("https://cdn.jsdelivr.net/gh/AnnMarieW/dash-bootstrap-templates@V1.0.1/dbc.min.css")
 
 tab_card = {'height': '100%'}
 
@@ -53,7 +49,6 @@ themes_options = [
 
 config_graph = {"displayModeBar": False, "showTips": False}
 
-
 main_config = {
     "hovermode": "x unified",
     "legend":{"yanchor": "top", 
@@ -63,9 +58,7 @@ main_config = {
               "font": {"color": "white"},
               "bgcolor": "rgba(0,0,0,0.5)"},
     "margin":{"l": 10, "r": 10, "t": 10, "b": 10}
-
 }
-
 
 select_month = [
     {"label": "Ano", "value": 0},
@@ -82,7 +75,6 @@ select_month = [
     {"label": "Nov", "value": 11},
     {"label": "Dez", "value": 12}
 ]
-
 
 options_team = [
     {"label": "Equipes", "value": "Equipes"},
@@ -107,8 +99,6 @@ def team_filter(team):
     else:
         mask = df['Equipe'].isin([team])
     return mask
-
-
 
 
 def convert_text(month):
@@ -143,11 +133,11 @@ def convert_text(month):
 
 
 
+
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP, dbc_css])
 
 # layout do app
 app.layout = dbc.Container(children=[
-    
     #Row 1
     dbc.Row([
         dbc.Col([
@@ -371,7 +361,9 @@ def graph3(team, theme):
     fig3.update_layout(main_config, height=180, template=template_from_url(theme))
     
     selequipe = html.H1((team))
+    
     return fig3, selequipe
+
 
 
 @callback(
@@ -416,23 +408,29 @@ def graph4(team, theme):
     
     return fig4
 
+
  
 @callback(
-        Output(component_id='graph5', component_property='figure'),
-        Input(ThemeChangerAIO.ids.radio('theme'), component_property='value')
+    Output(component_id='graph5', component_property='figure'),
+    Input(ThemeChangerAIO.ids.radio('theme'), component_property='value')
     )
 def graph5(theme):
+    
     df5 = df.groupby(['Mês', 'Equipe'])['Valor Pago'].sum().reset_index()
+    
     df5_group = df.groupby('Mês')['Valor Pago'].sum().reset_index()
 
     fig5 = px.line(df5, y='Valor Pago', x='Mês', color='Equipe')
+    
     fig5.add_trace(go.Scatter(y=df5_group['Valor Pago'], x=df5_group['Mês'], mode='lines+markers',
                    fill='tonexty', name='Vendas Mensal', fillcolor='rgba(255, 0, 0, 0.2 )'))
 
     fig5.update_layout(main_config, height=190,
                        template=template_from_url(theme))
+    
     return fig5
     
+
 
 @callback(
     Output(component_id='graph7', component_property='figure'),
@@ -445,12 +443,17 @@ def graph7(month, theme):
     df_7 = df.loc[mask]
     
     df_7 = df_7.groupby(['Consultor', 'Equipe'])['Valor Pago'].sum()
+    
     df_7 = df_7.sort_values(ascending=False).reset_index()
+    
     df_7['Part%'] = df_7['Valor Pago'] / df_7['Valor Pago'].sum() * 100
+    
     df_7['Part%'] = df_7['Part%'].astype(int)
+    
     df_7['Part%'] = df_7['Part%'].astype(float)
 
     fig7 = go.Figure()
+    
     fig7.add_trace(
         go.Indicator(mode='number',
             value=df_7['Valor Pago'].iloc[0],
@@ -465,6 +468,7 @@ def graph7(month, theme):
     return fig7
 
 
+
 @callback(
     Output(component_id='graph8', component_property='figure'),
     Input(component_id='box-month', component_property='value'),
@@ -476,7 +480,9 @@ def graph(month,theme):
     df_8 = df.loc[mask]
     
     df_8 = df_8.groupby('Equipe')['Valor Pago'].sum()
+    
     df_8 = df_8.sort_values(ascending=False).reset_index()
+    
     df_8['Part%'] = df_8['Valor Pago'] / df_8['Valor Pago'].sum() * 100
 
     fig8 = go.Figure()
@@ -491,6 +497,7 @@ def graph(month,theme):
     fig8.update_layout({"margin": {"l": 0, "r": 0, "t": 30, "b": 0}})
     
     return fig8
+
     
 
 @callback(
@@ -504,6 +511,7 @@ def graph15(month, theme):
     df_15 = df.loc[mask]
     
     df_15 = df_15.groupby('Equipe')['Valor Pago'].sum().reset_index()
+    
     df_15 = df_15.sort_values('Equipe', ascending=True)
 
     fig15 = go.Figure(go.Bar(y=df_15['Equipe'],
@@ -515,6 +523,7 @@ def graph15(month, theme):
 
     fig15.update_layout(main_config, height=350,
                         template=template_from_url(theme))
+    
     return fig15
     
  
@@ -531,12 +540,13 @@ def graph9(month, team, theme):
     df_9 = df.loc[mask]
     
     mask = team_filter(team)
+    
     df_9 = df_9.loc[mask]
     
     df_9 = df_9.groupby('Meio de Propaganda')['Valor Pago'].sum().reset_index()
     
-    
     fig9 = go.Figure()
+    
     fig9.add_trace(
         go.Pie(labels=df_9['Meio de Propaganda'], values=df_9['Valor Pago'], hole=.7))
 
@@ -574,6 +584,7 @@ def graph10(team, theme):
 def graph14(theme):
     
     fig14 = go.Figure()
+    
     fig14.add_trace(go.Indicator(mode='number',
                                  value=df['Valor Pago'].sum(),
                                  title={"text": f"<span style='font-size:150%'>Valor Total</span><br><span style='font-size:70%'></span><br>"},
@@ -582,6 +593,8 @@ def graph14(theme):
     fig14.update_layout(main_config, height=200, template=template_from_url(theme))
     
     return fig14
+
+
 
 
 if __name__ == '__main__':
