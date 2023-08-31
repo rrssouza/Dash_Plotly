@@ -29,3 +29,8 @@ Utilizando apenas **PYTHON** e as bibliotecas:
 > - Dash Bootstrap
 > - Plotly
 > - Pandas
+
+IDEs
+> - Visual Studio Code
+> - Jupyter lab
+
