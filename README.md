@@ -1,9 +1,9 @@
 # Dash_Plotly
-![PROJETO SALES_site_dark](https://github.com/rrssouza/Dash_Plotly/blob/main/Darkly.png)
+![PROJETO SALES_site_dark](https://github.com/rrssouza/Dash_Plotly/blob/main/img/Darkly.png)
 
-![PROJETO SALES_site_dark](https://github.com/rrssouza/Dash_Plotly/blob/main/Flatly.png)
+![PROJETO SALES_site_dark](https://github.com/rrssouza/Dash_Plotly/blob/main/img/Flatly.png)
 
-![PROJETO SALES_site_dark](https://github.com/rrssouza/Dash_Plotly/blob/main/Quartz.png)
+![PROJETO SALES_site_dark](https://github.com/rrssouza/Dash_Plotly/blob/main/img/Quartz.png)
 
 
 # Sales Analysis Dash
