@@ -1,8 +1,12 @@
 # Dash_Plotly
+
+## Theme Darkly
 ![PROJETO SALES_site_dark](https://github.com/rrssouza/Dash_Plotly/blob/main/img/Darkly.png)
 
+## Theme Flatly
 ![PROJETO SALES_site_dark](https://github.com/rrssouza/Dash_Plotly/blob/main/img/Flatly.png)
 
+## Theme Quartz
 ![PROJETO SALES_site_dark](https://github.com/rrssouza/Dash_Plotly/blob/main/img/Quartz.png)
 
 
