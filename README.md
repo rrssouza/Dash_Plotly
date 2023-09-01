@@ -32,3 +32,6 @@ Utilizando apenas **PYTHON** e as bibliotecas:
 
 IDEs
 > - Visual Studio Code
+
+Deploy Server (Produção)
+> - nGrok
