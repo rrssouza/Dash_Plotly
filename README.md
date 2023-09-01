@@ -1,16 +1,16 @@
-# Dash_Plotly
+## Dash_Plotly
 
-## Theme Darkly
-![PROJETO SALES_site_dark](https://github.com/rrssouza/Dash_Plotly/blob/main/img/Darkly.png)
+### Theme Darkly
+<img src="https://github.com/rrssouza/Dash_Plotly/blob/main/img/Darkly.png" width="800" height="400" />
 
-## Theme Flatly
-![PROJETO SALES_site_dark](https://github.com/rrssouza/Dash_Plotly/blob/main/img/Flatly.png)
+### Theme Flatly
+<img src="https://github.com/rrssouza/Dash_Plotly/blob/main/img/Flatly.png" width="800" height="400" />
 
-## Theme Quartz
-![PROJETO SALES_site_dark](https://github.com/rrssouza/Dash_Plotly/blob/main/img/Quartz.png)
+### Theme Quartz
+<img src="https://github.com/rrssouza/Dash_Plotly/blob/main/img/Quartz.png" width="800" height="400" />
 
 
-# Sales Analysis Dash
+## Sales Analysis Dash
 
 Dashboard para análise de métricas de vendas
 
@@ -32,5 +32,3 @@ Utilizando apenas **PYTHON** e as bibliotecas:
 
 IDEs
 > - Visual Studio Code
-> - Jupyter lab
-
