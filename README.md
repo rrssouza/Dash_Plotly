@@ -1,13 +1,13 @@
 ## Dash_Plotly
 
 ### Theme Darkly
-<img src="https://github.com/rrssouza/Dash_Plotly/blob/main/img/Darkly.png" width="800" height="400" />
+<img src="https://github.com/rrssouza/Dash_Plotly/blob/main/img/Darkly.png" width="700" height="300" />
 
 ### Theme Flatly
-<img src="https://github.com/rrssouza/Dash_Plotly/blob/main/img/Flatly.png" width="800" height="400" />
+<img src="https://github.com/rrssouza/Dash_Plotly/blob/main/img/Flatly.png" width="700" height="300" />
 
 ### Theme Quartz
-<img src="https://github.com/rrssouza/Dash_Plotly/blob/main/img/Quartz.png" width="800" height="400" />
+<img src="https://github.com/rrssouza/Dash_Plotly/blob/main/img/Quartz.png" width="700" height="300" />
 
 
 ## Sales Analysis Dash
