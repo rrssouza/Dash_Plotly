@@ -13,13 +13,8 @@
 
 ## Sales Analysis Dash-Plotly
 
-Dashboard para análise de métricas de vendas
+Dashboard p/ análise de vendas
 
-## 🔧 Funções
-
-- Ler e dispor dados de forma visual do dataset
-- Filtrar por equipe e/ou mês os dados para uma análise mais precisa e específica
-- Possibilidade de alternar entre os temas styles sheet bootstrap
 
 ## 👨‍💻 Tecnologias Utilizadas
 
@@ -31,7 +26,11 @@ Utilizando apenas **PYTHON** e as bibliotecas:
 > - Dash Bootstrap
 > - Plotly
 > - Pandas
+> - numpy
 
 IDEs
 > - Visual Studio Code
 > - Sublime Text
+
+Plataforma de hospedagem de código-fonte e controle de versão
+> - Git/GitHub
