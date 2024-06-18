@@ -1,16 +1,17 @@
-## Dash_Plotly
+## Dashboard
+
 
 ### Theme Darkly
-<img src="https://github.com/rrssouza/Dash_Plotly/blob/main/img/Darkly.png" width="800" height="400" />
+<img src="https://github.com/rrssouza/Dash_Plotly/blob/main/img/Darkly.png" width="200" height="100" />
 
 ### Theme Flatly
-<img src="https://github.com/rrssouza/Dash_Plotly/blob/main/img/Flatly.png" width="800" height="400" />
+<img src="https://github.com/rrssouza/Dash_Plotly/blob/main/img/Flatly.png" width="200" height="100" />
 
 ### Theme Quartz
-<img src="https://github.com/rrssouza/Dash_Plotly/blob/main/img/Quartz.png" width="800" height="400" />
+<img src="https://github.com/rrssouza/Dash_Plotly/blob/main/img/Quartz.png" width="200" height="100" />
 
 
-## Sales Analysis Dash
+## Sales Analysis Dash-Plotly
 
 Dashboard para análise de métricas de vendas
 
@@ -23,6 +24,7 @@ Dashboard para análise de métricas de vendas
 ## 👨‍💻 Tecnologias Utilizadas
 
 Utilizando apenas **PYTHON** e as bibliotecas:
+
 > - Dash-Plotly
 > - Dash-Core-Components
 > - Dash HTML
@@ -32,6 +34,4 @@ Utilizando apenas **PYTHON** e as bibliotecas:
 
 IDEs
 > - Visual Studio Code
-
-Deploy Server (Produção)
-> - nGrok
+> - Sublime Text
